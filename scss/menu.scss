@@ -1,0 +1,35 @@
+ul.menu{
+  background: transparent;
+
+  .label {
+    background: none;
+    color: inherit;
+    cursor: inherit;
+    padding: 0;
+    font-size: inherit;
+  }
+
+  li {
+    padding: 0;
+    background: transparent;
+
+    a {
+      @include transition(all .4s linear);
+      color: inherit;
+
+      .fas, .fa, .fab, .far {
+        margin-right: 5px;
+      }
+
+      &:hover, &:focus {
+        background: $secondaryColor;
+        color: #FFF;
+      }
+    }
+
+    &.active, &.current, &.is-active {
+      padding: 0;
+      background: transparent;
+    }
+  }
+}

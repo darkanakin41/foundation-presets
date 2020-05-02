@@ -1,0 +1,55 @@
+ul.pagination {
+    li {
+        & > a, & > span {
+            height: 30px;
+            line-height: 24px;
+            text-align: center;
+            @include border-radius(15px);
+            font-weight: 600;
+            padding: .1875rem .625rem;
+            display: block;
+        }
+
+        &.pagination-next, &.pagination-previous {
+            a {
+                &::before, &::after {
+                    font-family: $fontawesomeFamily;
+                    font-weight: $fontawesomeSolidWeight;
+                }
+            }
+        }
+
+        &.pagination-previous {
+            a {
+                &::before {
+                    content: fa-content($fa-var-chevron-left);
+                }
+            }
+        }
+
+        &.pagination-next {
+            a {
+                &::after {
+                    content: fa-content($fa-var-chevron-right);
+                }
+            }
+        }
+
+        &.current {
+            padding: 0;
+
+            a, span {
+                background-color: $mainColor;
+                color: #FFF;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $breakpoints) {
+    .pagination {
+        li {
+            display: inline-block;
+        }
+    }
+}
