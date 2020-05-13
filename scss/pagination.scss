@@ -37,6 +37,7 @@ ul.pagination {
 
         &.current {
             padding: 0;
+            background: transparent;
 
             a, span {
                 background-color: $mainColor;
@@ -46,7 +47,7 @@ ul.pagination {
     }
 }
 
-@media screen and (max-width: $breakpoints) {
+@media #{breakpoint(small only)} {
     .pagination {
         li {
             display: inline-block;
